@@ -90,16 +90,6 @@ const MoodTracker: React.FC<MoodTrackerProps> = ({ onSelectMood, onClose, isOpen
             </div>
           ))}
         </div>
-        
-        <div className="flex justify-center mt-4">
-          <Button 
-            variant="outline" 
-            onClick={onClose}
-            className="w-full"
-          >
-            Skip for later
-          </Button>
-        </div>
       </Card>
     </div>
   );
