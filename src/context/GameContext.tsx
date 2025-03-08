@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { Task, GameSession, Priority } from '@/types/task';
+import { Task, GameSession, Priority, TaskStatus } from '@/types/task';
 import { v4 as uuidv4 } from 'uuid';
 import { 
   initialGameSession, 
@@ -94,9 +94,9 @@ export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
     
     if (!taskToComplete) return;
     
-    const updatedTask = { 
+    const updatedTask: Task = { 
       ...taskToComplete, 
-      status: 'completed', 
+      status: 'completed' as TaskStatus, 
       updatedAt: new Date(),
       completedAt: new Date()
     };

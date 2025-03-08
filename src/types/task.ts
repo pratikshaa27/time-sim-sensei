@@ -3,6 +3,16 @@ export type Priority = 'urgent-important' | 'urgent-not-important' | 'not-urgent
 
 export type TaskStatus = 'pending' | 'in-progress' | 'completed';
 
+export type MoodRating = 1 | 2 | 3 | 4 | 5;
+
+export type MoodLabel = 'Awful' | 'Bad' | 'Okay' | 'Good' | 'Amazing';
+
+export interface Mood {
+  rating: MoodRating;
+  label: MoodLabel;
+  timestamp: Date;
+}
+
 export interface Task {
   id: string;
   title: string;
